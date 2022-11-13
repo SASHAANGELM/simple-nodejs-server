@@ -4,6 +4,6 @@ export const config = {
   outfile: "dist/index.js",
   platform: "node",
   target: "node18",
-  external: ["express"],
+  external: ["express", "dotenv"],
   format: "esm",
 };
