@@ -1,20 +1,22 @@
 {
-  "name": "vanilla-node-typescript-server",
-  "version": "1.0.0",
+  "name": "simple-nodejs-server",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
   "scripts": {
+    "postinstall": "npm run build",
     "test": "jest ",
     "build": "node ./config/build.prod.js",
     "build:dev": "node ./config/build.dev.js",
     "serve": "nodemon",
-    "start": "npm run build && node ./dist/index.js"
+    "start": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^4.17.14",
     "@types/jest": "^29.2.2",
     "@types/node": "^18.11.9",
     "jest": "^29.3.1",
@@ -23,7 +25,6 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@types/express": "^4.17.14",
     "esbuild": "^0.15.13",
     "express": "^4.18.2"
   }
