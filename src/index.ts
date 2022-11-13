@@ -1,0 +1,19 @@
+import express, { Express, Request, Response, Router } from "express";
+
+import { products } from "./controllers/products";
+
+const PORT = process.env.PORT || 3000;
+
+const app: Express = express();
+
+app.get("/", (req: Request, res: Response) => {
+  res.status(200).json({
+    data: "Simple test server is working",
+  });
+});
+
+app.use("/products", products);
+
+app.listen(PORT, () =>
+  console.log(`Server running on http://localhost:${PORT}`)
+);
